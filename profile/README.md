@@ -29,6 +29,7 @@ Base repository root for my Docker infrastructure. This is one of the major *pla
 
 # TODO
 
+- [ ] consider trying to use this git repo as the main source of truth for automation purposes; use `git submodule` on this repo?
 - [ ] The repository visibility is presently **private** for security reasons. As soon as I iron out how exactly we are going to handle the integration and environment handling of sensitive bits, we can implement these here and then re-mark the repositories here as **public**.
   1. I believe that by seperating the sensitive bits inside `compose.yml` and `.env` files into their own private `.env.secrets` file shall resolve **99%** of our issue; this is the method I shall be employing initially.
   2. The first repository to go live -- **public** -- is [plex](https://github.com/i8degrees-dockerfiles/plex.git).
