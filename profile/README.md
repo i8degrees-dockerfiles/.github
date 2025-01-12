@@ -3,14 +3,23 @@
 
 # i8degrees-dockerfiles
 
-Base directory path for my Docker infrastructure files.
+Base repository root for my Docker infrastructure. This is one of several virtualization styles of platform management that I personally maintain for my **Syn Net** LAN.
 
 ## usage
 
-```shell
-```
+### deps
 
-1. [rclone: Integration with Docker Volumes](https://rclone.org/docker/#getting-started)
+- any filesystem with a multi-host, concurrent **R/W** architecture (GlusterFS, GFS, AWS S3, CephFS, *...*)
+  * `zfs` is **NOT** multi-host capable *per se* without either using the snapshot replication feature across two or more separate (physical) **pools** at some interval of `+1min` units -- this is not suitable for *all* workload types, but is likely to be good enough for general use. Note that two or more physical hosts must be allocated for this (VM images for testing is OK, though!) You also are more than likely going to want the multipath features of `zfs` as opposed to doing so in pure hardware (like we did in the 90s).
+  * [rclone: Integration with Docker Volumes](https://rclone.org/docker/#getting-started)
+
+### hier
+
+- [GitHub profile](https://github.com/i8degrees-dockerfiles/.github)
+  - [archivebox](https://github.com/i8degrees-dockerfiles/archivebox.git)
+  - [ntfy](https://github.com/i8degrees-dockerfiles/ntfy.git)
+  - [traefik](https://github.com/i8degrees-dockerfiles/traefik.git)
+  - [templates](https://github.com/i8degrees-dockerfiles/templates.git)
 
 ## TODO
 
@@ -18,3 +27,6 @@ Base directory path for my Docker infrastructure files.
   1. I believe that by seperating the sensitive bits inside `compose.yml` and `.env` files into their own private `.env.secrets` file shall resolve **99%** of our issue; this is the method I shall be employing initially.
   2. The first repository to go live -- **public** -- is [plex](https://github.com/i8degrees-dockerfiles/plex.git).
   3. Somewhat unrelated to, but directly applicable here is the fact that I am concurrently testing the use of (Docker Swarm](https://docs.docker.com/engine/swarm/) for all of my containers here. Once unlocked, this engine offers support for [Docker Secrets](https://docs.docker.com/engine/swarm/secrets/). I anticipate that any [unresolved issues][1] will be gracefully resolved once this new infrastructure piece is in motion. I am expecting this item to not be anywhere near completion for roughly **six** months from now, best case scenario.
+
+## Reference Documents
+
