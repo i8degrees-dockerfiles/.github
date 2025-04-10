@@ -18,6 +18,8 @@ Base repository root for my Docker infrastructure. This is one of the major *pla
 - [GitHub profile](https://github.com/i8degrees-dockerfiles/.github)
   - [archivebox](https://github.com/i8degrees-dockerfiles/archivebox.git)
   - [ntfy](https://github.com/i8degrees-dockerfiles/ntfy.git)
+  - [homebox](https://github.com/i8degrees-dockerfiles/homebox.git)
+  - [inventree](https://github.com/i8degrees-dockerfiles/inventree.git)
   - [traefik](https://github.com/i8degrees-dockerfiles/traefik.git)
   - [templates](https://github.com/i8degrees-dockerfiles/templates.git)
   - [plex](https://github.com/i8degrees-dockerfiles/plex.git)
